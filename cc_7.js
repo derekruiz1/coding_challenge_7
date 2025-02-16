@@ -16,3 +16,18 @@ const calculateHourlyWage = function (salary, hoursPerWeek) {
 
 calculateHourlyWage(52000, 40); 
 calculateHourlyWage(75000, 35); 
+
+//Task 3 - Arrow Function
+const calculateLoyaltyDiscount = (amount, years) => {
+    if (years >= 5) {
+        price = amount * (1 - 0.15) //15% discount
+    } else { if (years >= 3) {
+        price = amount * (1 - 0.1) //10% discount
+    } else {
+        price = amount * (1 - 0.05) //5% discount
+    }} //Gives customer 15%, 10%, or 5% discount based on how long loyalty is 
+    console.log("Discounted Price:", "$" + price)
+}
+
+calculateLoyaltyDiscount(100, 6);
+calculateLoyaltyDiscount(200, 2);
