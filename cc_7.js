@@ -31,3 +31,26 @@ const calculateLoyaltyDiscount = (amount, years) => {
 
 calculateLoyaltyDiscount(100, 6);
 calculateLoyaltyDiscount(200, 2);
+
+//Task 4 - Parameters and Arguments 
+function calculateShippingCost(weight, location, expedited = false) {
+let shipping = {
+    "USA": (weight * 0.5) + 5,
+    "Canada": (weight * 0.7) + 10
+}; //Declaring Shipping Rates
+
+let expeditedFee = 0
+
+if (expedited === true) {
+    expeditedFee = 10
+} else {
+    expeditedFee = 0
+} //Setting up expedited fee
+
+let total = (shipping[location]) + expeditedFee
+console.log("Shipping Cost:", "$" + total) //Logging cost of shipping with inputs
+
+}
+
+calculateShippingCost(10, "USA", true); 
+calculateShippingCost(5, "Canada", false); 
