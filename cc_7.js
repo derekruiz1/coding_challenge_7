@@ -54,3 +54,12 @@ console.log("Shipping Cost:", "$" + total) //Logging cost of shipping with input
 
 calculateShippingCost(10, "USA", true); 
 calculateShippingCost(5, "Canada", false); 
+
+//Task 5 - Returning Values
+function calculateLoanInterest(principal, rate, years) {
+    let interest = principal * rate * years //Formula for interest
+    console.log ("Interest Owed:", "$" + interest.toFixed(2)); //Returning interest payment
+};
+
+calculateLoanInterest(1000, 0.05, 3);
+calculateLoanInterest(5000, 0.07, 5); 
