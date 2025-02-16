@@ -72,3 +72,16 @@ function filterHighValueTransactions(transactions,filterFunction) {
 };
 
 filterHighValueTransactions(transactions, amount => amount > 1000);
+
+//Task 7 - Closures
+function createBudgetTracker() {
+    let currentBudget = 0 //Starting Budget
+    return function (cost) {
+        currentBudget -= cost //Subtracting from budget after every purchase 
+        console.log("Budget:", "$" + currentBudget)
+    };
+}
+
+let budget = createBudgetTracker();
+budget(300); 
+budget(200); 
